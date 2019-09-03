@@ -1,4 +1,3 @@
-import _ from 'lodash';
 import shortid from 'shortid';
 import * as types from './actionTypes';
 import { Map, List } from 'immutable';
