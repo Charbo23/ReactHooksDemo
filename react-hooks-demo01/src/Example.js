@@ -1,28 +1,22 @@
-import React, { Component } from 'react';
-import { Map } from 'immutable';
-class Example extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            data: Map({
-                count: 0
-            })
-        }
-
-    }
-    handleClick = () => {
-        let newData = this.state.data.update('count', value => value + 1);
-        this.setState({ data: newData })
-    }
-
-    render() {
-        return (
-            <div>
-                <p>点击了{this.state.data.get('count')}次</p>
-                <button onClick={this.handleClick}>点我</button>
-            </div>
-        );
-    }
+import React, { useState, useEffect } from 'react';
+import { Button } from 'antd';
+import { successNotify } from './utils/Notify';
+function Example() {
+    //数组解构
+    const [count, setCount] = useState(0);
+    useEffect(() => {
+        successNotify('useEffect',`点击了${count}次`);
+    });
+    return (
+        <div>
+            <h2>点击了{count}次</h2>
+            <Button
+                type="primary"
+                onClick={() => setCount(count + 1)}
+            >
+                点我
+            </Button>
+        </div>
+    )
 }
-
 export default Example;
