@@ -1,4 +1,4 @@
-import React, { useState, Fragment } from 'react';
+import React, { useState, Fragment, useMemo } from 'react';
 import { Button } from 'antd';
 import '@/style/antd-style.module.scss';
 
@@ -34,7 +34,7 @@ function ChildComponent({ name, children }) {
         console.log('他来了他来了');
         return name + '，小红来了';
     }
-    const actionXiaohong = changeXiaohong(name)
+    const actionXiaohong = useMemo(changeXiaohong,[name])
     return (
         <Fragment>
             <h2>{actionXiaohong}</h2>
