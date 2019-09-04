@@ -1,9 +1,9 @@
 import React, { useState,createContext,useContext } from 'react';
 import { Button } from 'antd';
 import './style/antd-style.module.scss';
-const countContext = createContext();
+const CountContext = createContext();
 function Counter(){
-    let count = useContext(countContext);
+    let count = useContext(CountContext);
     return(
         <h2>子组件中的count：{count}</h2>
     )
@@ -19,9 +19,9 @@ function Example4() {
             >
                 点我
             </Button>
-            <countContext.Provider value={count}>
+            <CountContext.Provider value={count}>
                 <Counter/>
-            </countContext.Provider>
+            </CountContext.Provider>
         </div>
     )
 }
