@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Input } from 'antd';
 import antdStyle from './style/antd-style.module.scss';
-function Example() {
+function Example2() {
     //数组解构
     const [age, setAge] = useState(18);
     const [gender, setGender] = useState('male');
@@ -44,4 +44,4 @@ function Example() {
         </div>
     )
 }
-export default Example;
+export default Example2;

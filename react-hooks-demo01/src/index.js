@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './style/index.css';
-import Example from './Example';
+import Example5 from './Example5';
 // import TodoList from './TodoList';
 import { Provider } from 'react-redux';
 import store from './store';
@@ -11,7 +11,7 @@ import * as serviceWorker from './serviceWorker';
 const App = (
     <Provider store={store}>
         {/* <TodoList /> */}
-        <Example/>
+        <Example5/>
     </Provider>
 )
 
