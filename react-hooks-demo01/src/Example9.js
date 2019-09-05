@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useEffect } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import _ from 'lodash';
 function useWinSize() {
     const [size, setSize] = useState({
