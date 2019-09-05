@@ -1,10 +1,13 @@
 import React, { Fragment, useState, useRef, useEffect } from 'react';
 import { Button, Input } from 'antd';
 import antdStyle from './style/antd-style.module.scss';
+import useWinSize from './Example9';
+
 function Example8() {
     const [title, setTitle] = useState('Title');
     const [input, setInput] = useState('');
     const inputRef = useRef();
+    const size = useWinSize();
     const handleClick = () => {
         let inputValue = (inputRef.current.inputValue || '').trim();
         if (inputValue) {
@@ -36,6 +39,8 @@ function Example8() {
             >
                 打印
             </Button>
+            <h2>{'Width:' + size.width}</h2>
+            <h2>{'Height:' + size.height}</h2>
         </Fragment>
     )
 }
